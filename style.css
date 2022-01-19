@@ -77,7 +77,7 @@ body {
     width: 150px;
 }
 @media (max-width: 700px){
-  .cc-from-group select{
+  .cc-form-group select{
     width: 105px;
   }
 }
