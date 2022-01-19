@@ -76,6 +76,11 @@ body {
 .cc-form-group select{
     width: 150px;
 }
+@media (max-width: 700px){
+  .cc-from-group select{
+    width: 105px;
+  }
+}
 .cc-form-group .card-input__input{
     flex: 1;
     margin-right: 15px;
@@ -175,8 +180,14 @@ body {
     cursor: pointer;
     letter-spacing: -5px;
 }
+@media (max-width: 700px) {
+.cc-item-number{
+  font-size: 27px;
+  padding: 0px 8px;
+  }
+}
 .cc-item-number div{
-    transition: 0.2s all; 
+    transition: 0.2s all;
 }
 .cc-item-number-item {
     width: 16px;
@@ -212,7 +223,7 @@ body {
     text-overflow: ellipsis;
     text-transform: uppercase;
     font-size: 18px;
-    transition: 0.3s all; 
+    transition: 0.3s all;
 }
 .cc-item-date {
     flex-wrap: wrap;
