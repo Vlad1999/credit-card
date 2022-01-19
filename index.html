@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Credit Card</title>
+</head>
+<body>
+        <div id="root">
+            <div class="cc">
+                 <div class="cc-front">
+                     <div class="cc-front-top">
+                        <img class="cc-item-chip" src="images/credit-card-chip-silver.png" alt="chip">
+                        <div class="cc-item-type">
+                            <img class="cc-item-typeImg" src="images/visa.png" alt="type">
+                        </div>
+                     </div>
+                     <div>
+                        <label id="cardNumber" class="cc-item-number" for="number">
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item"> </div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item"> </div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item"> </div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                            <div class="cc-item-number-item">#</div>
+                         </label>
+                     </div>
+                     <div class="cc-item-content">
+                        <label class="cc-item-info" for="holders">
+                            <div class="cc-item-holder">Card Holder</div>
+                            <div id="fullName" class="cc-item-name">FULL NAME</div>
+                        </label>
+                         <div class="cc-item-date">
+                            <label class="cc-item-dateTitle" for="month">Expires</label>
+                            <label class="cc-item-dateItem" for="month"><div id="m">MM</div>/</label>
+                            <label class="cc-item-dateItem" for="year"><div id="y">YY</div></label></label>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="cc-back">
+                     <div class="cc-item-band"></div>
+                     <div class="cc-item-cvv">
+                         <div class="cc-item-cvvTitle">CVV</div>
+                         <div class="cc-item-cvvBand" id="cvvBand"></div>
+                     </div>
+                 </div>
+            </div>
+            <form class="cc-form" action="#">
+                <div>
+                    <label for="number">Card Number</label>
+                    <input type="text" name="number" id="number" onkeypress="return checkDigit(event)">
+
+                    <label for="holders">Card Holders</label>
+                    <input type="text" name="holders" id="holders">
+                </div>
+                <div class="cc-form-row">
+                    <div class="cc-form-col">
+                        <div class="cc-form-group">
+                            <Label class="cc-input-label" for="month">Expiration Date</Label>
+                            <select name="month" id="month" required>
+                                <option value="" disabled selected hidden>Month</option>
+                            </select>
+                            <select name="year" id="year" required>
+                                <option value="" disabled selected hidden>Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cc-form-col-cvv">
+                        <div class="cc-input">
+                            <label class="cc-input-label" for="cvv">CVV</label>
+                            <input type="text" name="cvv" id="cvv" maxlength="4" autocomplete="off" onkeypress="return checkDigit(event)"><br>
+                        </div>
+                    </div>
+                </div>
+                <button class="cc-input-button" type="submit">Submit</button>
+            </form>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
